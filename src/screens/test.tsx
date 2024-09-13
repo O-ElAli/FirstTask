@@ -26,7 +26,7 @@ const Directory: React.FC<ScreenProps> = ({navigation}) => {
                     
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.buttons}>
-                    <Text style={{color:'white'}}>
+                    <Text style={{color:'white'}} onPress={() => navigation.navigate("DynamicList")}>
                         Dynamic list test
                     </Text>
                 </TouchableOpacity>

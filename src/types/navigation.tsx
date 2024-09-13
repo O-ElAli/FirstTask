@@ -5,4 +5,5 @@ export type RootStackParamList = {
     Register: undefined
     Directory: undefined
     UseState: undefined
+    DynamicList: undefined
 }
