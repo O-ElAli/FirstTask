@@ -12,6 +12,9 @@ import Register from './src/screens/register'
 import Directory from './src/screens/test'
 import UseStateTest from './src/screens/useState';
 import DynamicList from './src/screens/dynamicList';
+import FormsScreen from './src/screens/forms';
+import RegisterScreen from './src/screens/register1';
+import DisplayInfo from './src/screens/displayInfo';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -38,6 +41,21 @@ const myStack = () => {
         <Stack.Screen
         name="DynamicList"
         component={DynamicList}
+        />
+        <Stack.Screen
+        name="Forms"
+        component={FormsScreen} 
+        />
+        <Stack.Screen
+        name="RegisterScreen"
+        component={RegisterScreen}
+        />
+        <Stack.Screen
+        name="DisplayInfo"
+        component={DisplayInfo}
+        initialParams={{
+          name: "Guest"
+        }}
         />
       </Stack.Navigator>
     </NavigationContainer>

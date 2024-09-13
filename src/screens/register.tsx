@@ -24,7 +24,7 @@ import BackgroundAnimation from '../assets/animatedBg';
 import { RootStackParamList } from '../types/navigation';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
-type LoginScreenProps = NativeStackScreenProps<RootStackParamList, 'Login'>;
+type LoginScreenProps = NativeStackScreenProps<RootStackParamList, 'Register'>;
 
 
 const Register:React.FC<LoginScreenProps> = ({navigation}) => {

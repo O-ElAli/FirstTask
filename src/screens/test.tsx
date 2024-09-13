@@ -30,6 +30,16 @@ const Directory: React.FC<ScreenProps> = ({navigation}) => {
                         Dynamic list test
                     </Text>
                 </TouchableOpacity>
+                <TouchableOpacity style={styles.buttons}>
+                    <Text style={{color:'white'}} onPress={() => navigation.navigate("Forms")}>
+                        Forms test
+                    </Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.buttons}>
+                    <Text style={{color:'white'}} onPress={() => navigation.navigate("RegisterScreen")}>
+                        Register Screen
+                        </Text>
+                </TouchableOpacity>
             </View>
         </View>
     )
