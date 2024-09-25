@@ -40,6 +40,11 @@ const Directory: React.FC<ScreenProps> = ({navigation}) => {
                         Register Screen
                         </Text>
                 </TouchableOpacity>
+                <TouchableOpacity style={styles.buttons}>
+                    <Text style={{color:'white'}} onPress={() => navigation.navigate("MapTraining")}>
+                        Map Training
+                        </Text>
+                </TouchableOpacity>
             </View>
         </View>
     )

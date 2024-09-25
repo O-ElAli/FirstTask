@@ -13,8 +13,9 @@ import Directory from './src/screens/test'
 import UseStateTest from './src/screens/useState';
 import DynamicList from './src/screens/dynamicList';
 import FormsScreen from './src/screens/forms';
-import RegisterScreen from './src/screens/register1';
+import RegisterScreen from './src/screens/registerTest';
 import DisplayInfo from './src/screens/displayInfo';
+import MapTraining from './src/screens/MapTraining'
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -56,6 +57,10 @@ const myStack = () => {
         initialParams={{
           name: "Guest"
         }}
+        />
+        <Stack.Screen
+        name="MapTraining"
+        component={MapTraining}
         />
       </Stack.Navigator>
     </NavigationContainer>

@@ -8,5 +8,6 @@ export type RootStackParamList = {
     DynamicList: undefined
     Forms: undefined
     RegisterScreen: undefined
-    DisplayInfo: {name: string, email:string, password:string} 
+    DisplayInfo: {name: string, email:string, password:string}
+    MapTraining: undefined
 }
