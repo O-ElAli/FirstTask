@@ -3,7 +3,7 @@
 export type RootStackParamList = {
     Login: undefined
     Register: undefined
-    Directory: undefined
+    Directory: undefined | any
     UseState: undefined
     DynamicList: undefined
     Forms: undefined

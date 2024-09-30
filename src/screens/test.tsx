@@ -10,13 +10,20 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
 type ScreenProps = NativeStackScreenProps<RootStackParamList, 'Directory'>;
 
-const Directory: React.FC<ScreenProps> = ({navigation}) => {
+const Directory: React.FC<ScreenProps> = ({navigation, route}) => {
 
+    
+
+    const { user, token } = route.params || {};
+    console.log(user);
 
     return(
         <View style={{flex:1, alignItems:'center',}}>
             <Text style={{fontSize: 70}}>
                 Directory
+            </Text>
+            <Text>
+                Welcome {user.name} 
             </Text>
             <View>
                 <TouchableOpacity style={styles.buttons} onPress={()=> navigation.navigate('UseState')}>
@@ -46,6 +53,9 @@ const Directory: React.FC<ScreenProps> = ({navigation}) => {
                         </Text>
                 </TouchableOpacity>
             </View>
+            <Text>
+                Token: {token}
+            </Text>
         </View>
     )
 }

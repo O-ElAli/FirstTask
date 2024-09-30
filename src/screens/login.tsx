@@ -39,6 +39,7 @@ const Login: React.FC<LoginScreenProps> = ({ navigation }) => {
 
   const [email,setEmail] = useState("");
   const [password,setPassword] = useState("");
+  const [error,setError] = useState<string | null>("");
 
 
   async function handleLogin(){
@@ -46,14 +47,17 @@ const Login: React.FC<LoginScreenProps> = ({ navigation }) => {
       const response = await axios.post("http://127.0.0.1:8081/api/login", {
         email,
         password,
-        device_name: `${Platform.OS} ${Platform.Version}`
+        
       }
     );
     if(response.data.user){
-      navigation.navigate('Directory')
+      setError(null)
+      console.log(response.data)
+      navigation.navigate('Directory', response.data)
     }
   }
     catch(e){
+      setError("Check the credentials then try again")
       console.log(e)
     }
   }
@@ -75,6 +79,12 @@ const Login: React.FC<LoginScreenProps> = ({ navigation }) => {
         LOGIN
       </Text>
       <TextInput placeholder='USERNAME' style={styles.input} value = {email} onChangeText={(text) => {setEmail(text)}}/>
+      {error && 
+      <Text style={{color:'red'}}>
+        {error}
+      </Text>
+      
+      }
       <TextInput placeholder='PASSWORD' style={styles.input} value = {password} onChangeText={(text) => {setPassword(text)}}/>
       <TouchableOpacity style={styles.loginButton} onPress={handleLogin} >
         <Text style={styles.loginText}>
